@@ -30,6 +30,7 @@ export default function MovieRow({
 
           return (
             <Link
+             id="#top-rated"
               key={movie.id}
               href={`/movie/${movie.id}`}
               className="min-w-[150px] max-w-[150px] snap-start hover:text-red-500 transition-all duration-400"

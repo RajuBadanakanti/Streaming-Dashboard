@@ -16,11 +16,11 @@ export default function Header() {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex gap-6 text-base">
-          <Link href="/" className="text-red-50 hover:text-red-500 transition-all duration-300">Home</Link>
-          <Link href="/movies" className=" text-red-50 hover:text-red-500 transition-all duration-300">Movies</Link>
-          <Link href="/series" className="text-red-50 hover:text-red-500 transition-all duration-300">Series</Link>
-          <Link href="/trending" className="text-red-50 hover:text-red-500 transition-all duration-300">Trending</Link>
+        <nav className="hidden md:flex gap-6 text-base text-gray-200">
+            <a href="#popular" className="text-red-50 hover:text-red-500 transition-colors duration-300">Popular</a>
+            <a href="#now-playing" className="text-red-50 hover:text-red-500 transition-colors duration-300">Now Playing</a>
+            <a href="#top-rated" className="text-red-50 hover:text-red-500 transition-colors duration-300">Top Rated</a>
+            <a href="#trending" className="text-red-50 hover:text-red-500 transition-colors duration-300">Trending</a>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -35,10 +35,10 @@ export default function Header() {
       {/* Mobile Menu */}
       {menuOpen && (
         <nav className="md:hidden bg-black border-t border-white/10 p-4 space-y-3">
-          <Link href="/" className="block text-red-50 hover:text-red-500 transition-all duration-300">Home</Link>
-          <Link href="/movies" className="block text-red-50 hover:text-red-500 transition-all duration-300">Movies</Link>
-          <Link href="/series" className="block text-red-50 hover:text-red-500 transition-all duration-300">Series</Link>
-          <Link href="/trending" className="block text-red-50 hover:text-red-500 transition-all duration-300">Trending</Link>
+          <a href="#popular" className="block text-red-50 hover:text-red-500 transition-all duration-300">Popular</a>
+          <a href="#now-playing" className="block text-red-50 hover:text-red-500 transition-all duration-300">Now Playing</a>
+          <a href="#top-rated" className="block text-red-50 hover:text-red-500 transition-all duration-300">Top Rated</a>
+          <a href="#trending" className="block text-red-50 hover:text-red-500 transition-all duration-300">Trending</a>
         </nav>
       )}
     </header>

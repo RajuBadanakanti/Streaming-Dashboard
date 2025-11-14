@@ -54,15 +54,27 @@ export default async function Home() {
   const heroMovie = popular[0];
 
   return (
-    <section>
+    <section id="home">
       {/* HERO BANNER */}
       {heroMovie && <HeroBanner movie={heroMovie} />}
 
       {/* MOVIE ROWS */}
-      <MovieRow movies={popular} categoryTitle="Popular Movies" />
-      <MovieRow movies={nowPlaying} categoryTitle="Now Playing" />
+    <section id="popular" className="scroll-mt-24">
+       <MovieRow movies={popular} categoryTitle="Popular Movies" />
+    </section>
+
+    <section id="now-playing">
+  <MovieRow movies={nowPlaying} categoryTitle="Now Playing" />
+    </section>
+
+    <section id="top-rated" className="scroll-mt-24">
       <MovieRow movies={topRated} categoryTitle="Top Rated" />
+    </section>
+
+    <section id="trending" className="scroll-mt-24">
       <MovieRow movies={trending} categoryTitle="Trending This Week" />
+    </section>
+
     </section>
   );
 }
