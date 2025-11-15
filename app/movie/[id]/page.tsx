@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MovieDetail } from "@/types/movie";
+import AddToList from "@/app/components/AddToList";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -168,9 +169,8 @@ export default async function MoviePage({ params }: Props) {
                 </a>
               )}
 
-              <button className="bg-white/15 px-4 py-2 md:px-8 md:py-3 text-sm md:text-lg rounded-md font-semibold border border-white/20 hover:bg-white/25 transition-all">
-                + My List
-              </button>
+ <AddToList movie={movie} />
+
             </div>
           </div>
         </div>

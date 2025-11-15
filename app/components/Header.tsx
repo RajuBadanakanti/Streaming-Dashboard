@@ -17,10 +17,10 @@ export default function Header() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex gap-6 text-base text-gray-200">
-            <a href="#popular" className="text-red-50 hover:text-red-500 transition-colors duration-300">Popular</a>
-            <a href="#now-playing" className="text-red-50 hover:text-red-500 transition-colors duration-300">Now Playing</a>
-            <a href="#top-rated" className="text-red-50 hover:text-red-500 transition-colors duration-300">Top Rated</a>
-            <a href="#trending" className="text-red-50 hover:text-red-500 transition-colors duration-300">Trending</a>
+          <Link href="/" className="text-red-50 hover:text-red-500 transition-colors duration-300">Home</Link>
+          <Link href="/my-list" className="text-red-50 hover:text-red-500 transition">
+            My List
+          </Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -34,11 +34,9 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <nav className="md:hidden bg-black border-t border-white/10 p-4 space-y-3">
-          <a href="#popular" className="block text-red-50 hover:text-red-500 transition-all duration-300">Popular</a>
-          <a href="#now-playing" className="block text-red-50 hover:text-red-500 transition-all duration-300">Now Playing</a>
-          <a href="#top-rated" className="block text-red-50 hover:text-red-500 transition-all duration-300">Top Rated</a>
-          <a href="#trending" className="block text-red-50 hover:text-red-500 transition-all duration-300">Trending</a>
+        <nav className="md:hidden bg-black border-t border-white/10 p-4 space-y-3"  onClick={() => setMenuOpen(!menuOpen)}>
+          <Link href="/" className="block text-red-50 hover:text-red-500 transition-all duration-300">Home</Link>
+          <Link href="/my-list" className="block text-red-50 hover:text-red-500 transition-all duration-300">My List</Link>
         </nav>
       )}
     </header>
